@@ -26,11 +26,8 @@ jobs:
 
       - name: Run tests
         run: |
-          echo "test('CI test', () => { expect(true).toBe(true); });" > test.js
-          node -e "require('fs').writeFileSync('package.json', '{\"scripts\":{\"test\":\"node test.js\"}}')"
-          npm test
+           npm test
 
       - name: Run EsLint
         run: run lint
-        
-            
+
